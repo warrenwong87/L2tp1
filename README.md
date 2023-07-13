@@ -34,6 +34,12 @@ iptables -t nat -A POSTROUTING -s 192.168.18.0/24 -d 0.0.0.0/0 -o eth0 -j MASQUE
 
 iptables -I FORWARD -s 192.168.18.0/24 -p tcp --syn -i ppp+ -j TCPMSS --set-mss 1300
 
+iptables-save > /etc/iptables-rules
+
+vim /etc/network/interfaces/
+
+pre-up iptables-restore < /etc/iptables-rules
+
 if not wowking
 
 iptables -t nat -A POSTROUTING -s 192.168.18.0/24 -o eth0 -j SNAT --to-source 10.0.8.46
