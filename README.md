@@ -1,3 +1,5 @@
+先安装PPTP 后 L2tp
+
 Install L2tp and PPTP.
 
 wget --no-check-certificate https://raw.githubusercontent.com/warrenwong87/L2tp1/main/l2tp.sh
