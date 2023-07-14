@@ -52,5 +52,10 @@ iptables -I FORWARD -s 192.168.18.0/24 -j ACCEPT
 
 iptables -I FORWARD -d 192.168.18.0/24 -j ACCEPT
 
+vim /etc/ppp/ip-up
+
+添加一行如下图
+
+ ifconfig ppp0 mtu 1472
 
 https://www.neatstudio.com/show-2256-1.shtml
