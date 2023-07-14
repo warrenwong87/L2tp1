@@ -51,3 +51,6 @@ iptables -t nat -A POSTROUTING -s 10.0.8.0/24 -o eth0 -j MASQUERADE
 iptables -I FORWARD -s 192.168.18.0/24 -j ACCEPT
 
 iptables -I FORWARD -d 192.168.18.0/24 -j ACCEPT
+
+
+https://www.neatstudio.com/show-2256-1.shtml
